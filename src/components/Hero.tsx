@@ -8,55 +8,54 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative isolate pt-28 sm:pt-32 lg:pt-36 pb-16 sm:pb-20 lg:pb-28 overflow-hidden scroll-mt-28 bg-gradient-to-b from-[#F6FBFC] via-[#FFFFFF] to-[#FFFFFF]"
+      className="relative isolate pt-28 sm:pt-32 lg:pt-36 pb-16 sm:pb-20 lg:pb-28 overflow-hidden scroll-mt-28 bg-gradient-to-b from-[#F2FAFC] via-[#FAFEFF] to-[#FFFFFF]"
     >
       {/* ======================================================== */}
-      {/* REFINED, ULTRA-LIGHT BACKGROUND ACCENTS (Subtle & Airy)  */}
+      {/* RESTORED VISUAL ACCENTS (75% White, 15% Aqua, 10% Teal)  */}
       {/* ======================================================== */}
 
-      {/* 1. Top-Left Faint Ice-Blue Ambient Glow */}
-      <div className="absolute -top-16 -left-16 w-[480px] h-[380px] bg-gradient-to-br from-sky-100/35 via-teal-50/20 to-transparent rounded-full blur-3xl pointer-events-none z-0 opacity-40" />
-
-      {/* 2. Top-Right Facet (Whisper-light crystal accent) */}
-      <div className="absolute top-0 right-0 w-[380px] h-[280px] pointer-events-none z-0 overflow-hidden opacity-30">
+      {/* 1. Top-Left Soft Aqua Ambient Glow & Corner Facet */}
+      <div className="absolute -top-16 -left-16 w-[480px] h-[380px] bg-gradient-to-br from-[#27DEC5]/20 via-[#00BFC0]/10 to-transparent rounded-full blur-3xl pointer-events-none z-0" />
+      <div className="absolute top-0 left-0 w-[320px] h-[220px] pointer-events-none z-0 overflow-hidden">
         <div
-          className="w-full h-full bg-gradient-to-bl from-teal-200/15 via-sky-100/10 to-transparent"
-          style={{ clipPath: 'polygon(100% 0, 0 0, 100% 85%)' }}
+          className="w-full h-full bg-gradient-to-br from-[#00BFC0]/16 via-[#27DEC5]/08 to-transparent"
+          style={{ clipPath: 'polygon(0 0, 100% 0, 0 85%)' }}
         />
       </div>
 
-      {/* 3. Bottom-Right Low-Opacity Geometric Facets */}
-      <div className="absolute bottom-0 right-0 w-[580px] h-[420px] pointer-events-none z-0 overflow-hidden">
-        {/* Large Corner Facet */}
+      {/* 2. Top-Right Translucent Facet (Inspired by Averen logo triangles) */}
+      <div className="absolute top-0 right-0 w-[460px] lg:w-[620px] h-[340px] lg:h-[420px] pointer-events-none z-0 overflow-hidden">
+        {/* Primary Top-Right Diagonal Facet */}
         <div
-          className="absolute bottom-0 right-0 w-[420px] h-[320px] bg-gradient-to-tl from-teal-200/20 via-sky-100/10 to-transparent opacity-30"
-          style={{ clipPath: 'polygon(100% 25%, 100% 100%, 25% 100%)' }}
+          className="w-full h-full bg-gradient-to-bl from-[#00BFC0]/18 via-[#27DEC5]/10 to-transparent"
+          style={{ clipPath: 'polygon(100% 0, 20% 0, 100% 88%)' }}
         />
-        {/* Adjacent Triangular Facet */}
+        {/* Secondary Inner Facet */}
         <div
-          className="absolute bottom-0 right-[200px] w-[300px] h-[220px] bg-gradient-to-t from-teal-100/15 to-transparent opacity-20"
-          style={{ clipPath: 'polygon(100% 100%, 0% 100%, 65% 0%)' }}
+          className="absolute top-0 right-0 w-[300px] h-[220px] bg-gradient-to-bl from-[#27DEC5]/14 via-[#0879B9]/06 to-transparent"
+          style={{ clipPath: 'polygon(100% 0, 45% 0, 100% 55%)' }}
         />
       </div>
 
-      {/* 4. Ultra-Subtle Translucent Flowing Wave Across the Bottom */}
+      {/* 3. Visible Soft Aqua Flowing Wave Layers Across Bottom */}
       <div className="absolute -bottom-1 left-0 right-0 w-full overflow-hidden leading-none pointer-events-none z-0">
         <svg
           viewBox="0 0 1440 220"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-auto min-h-[120px] opacity-25"
+          className="w-full h-auto min-h-[135px]"
           preserveAspectRatio="none"
         >
           <defs>
             <linearGradient id="heroWaveGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#27DEC5" stopOpacity="0.10" />
-              <stop offset="45%" stopColor="#00BFC0" stopOpacity="0.12" />
-              <stop offset="100%" stopColor="#0879B9" stopOpacity="0.06" />
+              <stop offset="0%" stopColor="#27DEC5" stopOpacity="0.24" />
+              <stop offset="45%" stopColor="#00BFC0" stopOpacity="0.26" />
+              <stop offset="100%" stopColor="#0879B9" stopOpacity="0.12" />
             </linearGradient>
             <linearGradient id="heroWaveGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.95" />
-              <stop offset="100%" stopColor="#F0F9FB" stopOpacity="0.20" />
+              <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.82" />
+              <stop offset="55%" stopColor="#E0F7FA" stopOpacity="0.36" />
+              <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.95" />
             </linearGradient>
           </defs>
           <path
@@ -68,6 +67,20 @@ export const Hero: React.FC = () => {
             fill="url(#heroWaveGradient2)"
           />
         </svg>
+      </div>
+
+      {/* 4. Bottom-Right Visible Translucent Geometric Facets */}
+      <div className="absolute bottom-0 right-0 w-[560px] lg:w-[680px] h-[380px] lg:h-[460px] pointer-events-none z-0 overflow-hidden">
+        {/* Large Corner Diagonal Facet */}
+        <div
+          className="absolute bottom-0 right-0 w-[460px] h-[340px] bg-gradient-to-tl from-[#27DEC5]/24 via-[#00BFC0]/14 to-transparent"
+          style={{ clipPath: 'polygon(100% 20%, 100% 100%, 20% 100%)' }}
+        />
+        {/* Secondary Adjacent Angular Facet */}
+        <div
+          className="absolute bottom-0 right-[150px] w-[320px] h-[220px] bg-gradient-to-t from-[#00BFC0]/16 via-[#27DEC5]/08 to-transparent"
+          style={{ clipPath: 'polygon(100% 100%, 0% 100%, 65% 0%)' }}
+        />
       </div>
 
       {/* ======================================================== */}
@@ -115,16 +128,16 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Complete Averen Logo with Subtle Glow & Thin Orbit */}
+          {/* Right Column: Complete Averen Logo with Gentle Glow & Visible Circular Frame */}
           <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end z-10">
             <div className="relative w-full max-w-[680px] flex items-center justify-center py-6 px-1">
-              {/* 1. Subtle, 60% Reduced Radial Glow behind Logo */}
-              <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] sm:w-[460px] sm:h-[460px] lg:w-[540px] lg:h-[540px] rounded-full bg-[radial-gradient(circle,rgba(0,191,192,0.12)_0%,rgba(39,222,197,0.06)_40%,transparent_70%)] blur-2xl pointer-events-none z-0" />
+              {/* 1. Gentle Cyan-Blue Radial Gradient Glow behind Logo */}
+              <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] sm:w-[480px] sm:h-[480px] lg:w-[560px] lg:h-[560px] rounded-full bg-[radial-gradient(circle,rgba(0,191,192,0.22)_0%,rgba(39,222,197,0.13)_35%,rgba(8,121,185,0.04)_55%,transparent_72%)] blur-2xl pointer-events-none z-0" />
 
-              {/* 2. Delicate, Thin Circular Orbit Ring (Subtle & Non-Intrusive) */}
-              <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[290px] h-[290px] sm:w-[440px] sm:h-[440px] lg:w-[520px] lg:h-[520px] rounded-full border border-slate-300/40 pointer-events-none z-0">
-                {/* Thin Orbit Accent Dot at ~2 o'clock */}
-                <div className="absolute top-[14%] right-[14%] w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-brand-teal/80 ring-2 ring-white/90" />
+              {/* 2. Visible Luminous Circular Frame with soft translucent fill */}
+              <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[275px] h-[275px] sm:w-[440px] sm:h-[440px] lg:w-[540px] lg:h-[540px] rounded-full bg-white/45 backdrop-blur-[1px] border-[1.5px] border-white/90 shadow-[0_0_24px_rgba(0,191,192,0.18)] pointer-events-none z-0">
+                {/* Visible Accent Node Dot at ~2 o'clock */}
+                <div className="absolute top-[14%] right-[14%] w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-brand-teal shadow-[0_0_10px_#00BFC0] ring-2 ring-white" />
               </div>
 
               {/* 3. Complete, Uncropped Original Averen Technologies Logo */}
