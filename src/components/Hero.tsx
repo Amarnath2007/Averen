@@ -8,55 +8,55 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative isolate pt-28 sm:pt-32 lg:pt-36 pb-16 sm:pb-20 lg:pb-28 overflow-hidden scroll-mt-28 bg-gradient-to-br from-[#DDF5F7] via-[#F2FAFC] to-[#FFFFFF]"
+      className="relative isolate pt-28 sm:pt-32 lg:pt-36 pb-16 sm:pb-20 lg:pb-28 overflow-hidden scroll-mt-28 bg-gradient-to-b from-[#F6FBFC] via-[#FFFFFF] to-[#FFFFFF]"
     >
       {/* ======================================================== */}
-      {/* BACKGROUND DECORATIVE LAYERS (Inspired by Reference UI)   */}
+      {/* REFINED, ULTRA-LIGHT BACKGROUND ACCENTS (Subtle & Airy)  */}
       {/* ======================================================== */}
 
-      {/* 1. Top-Left Flowing Soft Cyan Glow */}
-      <div className="absolute -top-12 -left-12 w-[500px] h-[400px] bg-gradient-to-br from-[#27DEC5]/30 via-[#00BFC0]/15 to-transparent rounded-full blur-3xl pointer-events-none z-0" />
+      {/* 1. Top-Left Faint Ice-Blue Ambient Glow */}
+      <div className="absolute -top-16 -left-16 w-[480px] h-[380px] bg-gradient-to-br from-sky-100/35 via-teal-50/20 to-transparent rounded-full blur-3xl pointer-events-none z-0 opacity-40" />
 
-      {/* 2. Top-Right Facet (Triangular polygon inspired by logo facets) */}
-      <div className="absolute top-0 right-0 w-[380px] h-[280px] pointer-events-none z-0 overflow-hidden">
+      {/* 2. Top-Right Facet (Whisper-light crystal accent) */}
+      <div className="absolute top-0 right-0 w-[380px] h-[280px] pointer-events-none z-0 overflow-hidden opacity-30">
         <div
-          className="w-full h-full bg-gradient-to-bl from-[#00BFC0]/20 via-[#27DEC5]/10 to-transparent"
+          className="w-full h-full bg-gradient-to-bl from-teal-200/15 via-sky-100/10 to-transparent"
           style={{ clipPath: 'polygon(100% 0, 0 0, 100% 85%)' }}
         />
       </div>
 
-      {/* 3. Bottom-Right Angular Triangular Facets */}
+      {/* 3. Bottom-Right Low-Opacity Geometric Facets */}
       <div className="absolute bottom-0 right-0 w-[580px] h-[420px] pointer-events-none z-0 overflow-hidden">
         {/* Large Corner Facet */}
         <div
-          className="absolute bottom-0 right-0 w-[420px] h-[320px] bg-gradient-to-tl from-[#27DEC5]/35 via-[#00BFC0]/20 to-transparent"
+          className="absolute bottom-0 right-0 w-[420px] h-[320px] bg-gradient-to-tl from-teal-200/20 via-sky-100/10 to-transparent opacity-30"
           style={{ clipPath: 'polygon(100% 25%, 100% 100%, 25% 100%)' }}
         />
         {/* Adjacent Triangular Facet */}
         <div
-          className="absolute bottom-0 right-[200px] w-[300px] h-[220px] bg-gradient-to-t from-[#00BFC0]/20 via-[#27DEC5]/10 to-transparent"
+          className="absolute bottom-0 right-[200px] w-[300px] h-[220px] bg-gradient-to-t from-teal-100/15 to-transparent opacity-20"
           style={{ clipPath: 'polygon(100% 100%, 0% 100%, 65% 0%)' }}
         />
       </div>
 
-      {/* 4. Elegant Translucent Flowing Wave Across the Bottom */}
+      {/* 4. Ultra-Subtle Translucent Flowing Wave Across the Bottom */}
       <div className="absolute -bottom-1 left-0 right-0 w-full overflow-hidden leading-none pointer-events-none z-0">
         <svg
           viewBox="0 0 1440 220"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-auto min-h-[140px] opacity-75"
+          className="w-full h-auto min-h-[120px] opacity-25"
           preserveAspectRatio="none"
         >
           <defs>
             <linearGradient id="heroWaveGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#27DEC5" stopOpacity="0.25" />
-              <stop offset="45%" stopColor="#00BFC0" stopOpacity="0.30" />
-              <stop offset="100%" stopColor="#0879B9" stopOpacity="0.18" />
+              <stop offset="0%" stopColor="#27DEC5" stopOpacity="0.10" />
+              <stop offset="45%" stopColor="#00BFC0" stopOpacity="0.12" />
+              <stop offset="100%" stopColor="#0879B9" stopOpacity="0.06" />
             </linearGradient>
             <linearGradient id="heroWaveGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.85" />
-              <stop offset="100%" stopColor="#DDF5F7" stopOpacity="0.45" />
+              <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.95" />
+              <stop offset="100%" stopColor="#F0F9FB" stopOpacity="0.20" />
             </linearGradient>
           </defs>
           <path
@@ -78,7 +78,7 @@ export const Hero: React.FC = () => {
           {/* Left Column: Headline, Description & CTAs */}
           <div className="lg:col-span-6 space-y-5 sm:space-y-6 z-10">
             {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-50/95 border border-teal-200/90 text-brand-navy text-xs sm:text-sm font-semibold shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-50/90 border border-teal-200/70 text-brand-navy text-xs sm:text-sm font-semibold shadow-xs">
               <span className="w-2.5 h-2.5 rounded-full bg-brand-teal animate-pulse" />
               <span>Digital Product &amp; Technology Studio</span>
             </div>
@@ -115,26 +115,23 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Complete Averen Logo with Radial Glow & Orbit Depth Elements */}
+          {/* Right Column: Complete Averen Logo with Subtle Glow & Thin Orbit */}
           <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end z-10">
             <div className="relative w-full max-w-[680px] flex items-center justify-center py-6 px-1">
-              {/* 1. Subtle Cyan and Light-Blue Radial Glow behind the Logo */}
-              <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] sm:w-[460px] sm:h-[460px] lg:w-[540px] lg:h-[540px] rounded-full bg-[radial-gradient(circle,rgba(0,191,192,0.32)_0%,rgba(39,222,197,0.18)_40%,rgba(240,250,253,0)_70%)] blur-2xl pointer-events-none z-0" />
+              {/* 1. Subtle, 60% Reduced Radial Glow behind Logo */}
+              <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] sm:w-[460px] sm:h-[460px] lg:w-[540px] lg:h-[540px] rounded-full bg-[radial-gradient(circle,rgba(0,191,192,0.12)_0%,rgba(39,222,197,0.06)_40%,transparent_70%)] blur-2xl pointer-events-none z-0" />
 
-              {/* 2. Delicate Circular Orbit Ring with White/Cyan Stroke */}
-              <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[290px] h-[290px] sm:w-[440px] sm:h-[440px] lg:w-[520px] lg:h-[520px] rounded-full border-[1.5px] border-white/90 shadow-[0_0_25px_rgba(0,191,192,0.20)] pointer-events-none z-0">
-                {/* Orbit Accent Dot at ~2 o'clock */}
-                <div className="absolute top-[14%] right-[14%] w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full bg-brand-teal shadow-[0_0_12px_#00BFC0] ring-2 ring-white" />
+              {/* 2. Delicate, Thin Circular Orbit Ring (Subtle & Non-Intrusive) */}
+              <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[290px] h-[290px] sm:w-[440px] sm:h-[440px] lg:w-[520px] lg:h-[520px] rounded-full border border-slate-300/40 pointer-events-none z-0">
+                {/* Thin Orbit Accent Dot at ~2 o'clock */}
+                <div className="absolute top-[14%] right-[14%] w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-brand-teal/80 ring-2 ring-white/90" />
               </div>
 
-              {/* 3. Concentric Subtle Inner Orbit Arc */}
-              <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] sm:w-[340px] sm:h-[340px] lg:w-[420px] lg:h-[420px] rounded-full border border-teal-200/35 border-dashed pointer-events-none z-0" />
-
-              {/* 4. Complete, Uncropped Original Averen Technologies Logo */}
+              {/* 3. Complete, Uncropped Original Averen Technologies Logo */}
               <img
                 src="/averen.png"
                 alt="AVEREN TECHNOLOGIES - Building Digital Products. Empowering Ideas."
-                className="hero-logo w-full max-w-[600px] xl:max-w-[650px] 2xl:max-w-[680px] h-auto object-contain select-none transition-transform duration-300 hover:scale-[1.02] drop-shadow-[0_20px_35px_rgba(7,27,53,0.08)] relative z-10"
+                className="hero-logo w-full max-w-[600px] xl:max-w-[650px] 2xl:max-w-[680px] h-auto object-contain select-none transition-transform duration-300 hover:scale-[1.02] drop-shadow-[0_15px_30px_rgba(7,27,53,0.05)] relative z-10"
               />
             </div>
           </div>
