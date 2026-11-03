@@ -52,7 +52,7 @@ body {
 
 .hero-logo {
   width: 100%;
-  max-width: 680px;
+  max-width: 750px;
   height: auto;
   object-fit: contain;
 }

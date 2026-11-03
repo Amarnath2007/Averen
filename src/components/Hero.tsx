@@ -130,15 +130,15 @@ export const Hero: React.FC = () => {
 
           {/* Right Column: Complete Averen Logo standing independently against soft background */}
           <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end z-10">
-            <div className="relative w-full max-w-[680px] flex items-center justify-center py-6 px-1">
+            <div className="relative w-full max-w-[740px] flex items-center justify-center py-6 px-1">
               {/* 1. Gentle Cyan-Blue Radial Gradient Glow behind Logo - Centered */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] sm:w-[480px] sm:h-[480px] lg:w-[560px] lg:h-[560px] rounded-full bg-[radial-gradient(circle,rgba(0,191,192,0.22)_0%,rgba(39,222,197,0.13)_35%,rgba(8,121,185,0.04)_55%,transparent_72%)] blur-2xl pointer-events-none z-0" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[360px] h-[360px] sm:w-[500px] sm:h-[500px] lg:w-[600px] lg:h-[600px] rounded-full bg-[radial-gradient(circle,rgba(0,191,192,0.22)_0%,rgba(39,222,197,0.13)_35%,rgba(8,121,185,0.04)_55%,transparent_72%)] blur-2xl pointer-events-none z-0" />
 
               {/* 2. Complete, Uncropped Original Averen Technologies Logo */}
               <img
                 src="/averen.png"
                 alt="AVEREN TECHNOLOGIES - Building Digital Products. Empowering Ideas."
-                className="hero-logo w-full max-w-[600px] xl:max-w-[650px] 2xl:max-w-[680px] h-auto object-contain select-none transition-transform duration-300 hover:scale-[1.02] drop-shadow-[0_15px_30px_rgba(7,27,53,0.05)] relative z-10"
+                className="hero-logo w-full max-w-[660px] xl:max-w-[700px] 2xl:max-w-[740px] h-auto object-contain select-none transition-transform duration-300 hover:scale-[1.02] drop-shadow-[0_15px_30px_rgba(7,27,53,0.05)] relative z-10"
               />
             </div>
           </div>
