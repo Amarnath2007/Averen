@@ -177,7 +177,7 @@ export const Contact: React.FC = () => {
                     rel="noopener noreferrer"
                     className="text-white hover:text-[#25D366] transition-colors font-medium hover:underline"
                   >
-                    Chat on WhatsApp &rarr;
+                    Chat on WhatsApp
                   </a>
                 </div>
               </div>
