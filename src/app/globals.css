@@ -11,6 +11,12 @@
      Adjust this value (e.g. 380px, 400px, etc.) to resize the hero logo.
      ========================================================================== */
   --hero-logo-width: 380px;
+
+  /* ==========================================================================
+     RUNNING TEXT TICKER DURATION
+     Higher value = slower speed. 48s gives a smooth, relaxed, legible pace.
+     ========================================================================== */
+  --ticker-duration: 48s;
 }
 
 html {
@@ -82,7 +88,7 @@ body {
 .ticker-track {
   display: flex;
   width: max-content;
-  animation: ticker-slide 32s linear infinite;
+  animation: ticker-slide var(--ticker-duration, 48s) linear infinite;
   will-change: transform;
 }
 
