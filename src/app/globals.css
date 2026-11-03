@@ -5,6 +5,12 @@
 :root {
   --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
   --font-space-grotesk: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+
+  /* ==========================================================================
+     HERO LOGO SIZE CONTROLLER
+     Adjust this value (e.g. 380px, 400px, etc.) to resize the hero logo.
+     ========================================================================== */
+  --hero-logo-width: 380px;
 }
 
 html {
@@ -52,7 +58,7 @@ body {
 
 .hero-logo {
   width: 100%;
-  max-width: 425px;
+  max-width: var(--hero-logo-width, 380px);
   height: auto;
   object-fit: contain;
 }

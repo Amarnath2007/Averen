@@ -130,15 +130,15 @@ export const Hero: React.FC = () => {
 
           {/* Right Column: Complete Averen Logo standing independently against soft background */}
           <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end z-10">
-            <div className="relative w-full max-w-[480px] flex items-center justify-center py-6 px-1">
+            <div className="relative w-full max-w-[460px] flex items-center justify-center py-6 px-1">
               {/* 1. Gentle Cyan-Blue Radial Gradient Glow behind Logo - Centered */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] lg:w-[440px] lg:h-[440px] rounded-full bg-[radial-gradient(circle,rgba(0,191,192,0.22)_0%,rgba(39,222,197,0.13)_35%,rgba(8,121,185,0.04)_55%,transparent_72%)] blur-2xl pointer-events-none z-0" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] lg:w-[400px] lg:h-[400px] rounded-full bg-[radial-gradient(circle,rgba(0,191,192,0.22)_0%,rgba(39,222,197,0.13)_35%,rgba(8,121,185,0.04)_55%,transparent_72%)] blur-2xl pointer-events-none z-0" />
 
-              {/* 2. Complete, Uncropped Original Averen Technologies Logo (Rendered width ~400-430px on desktop) */}
+              {/* 2. Complete, Uncropped Original Averen Technologies Logo (Controlled via --hero-logo-width in globals.css) */}
               <img
                 src="/averen.png"
                 alt="AVEREN TECHNOLOGIES - Building Digital Products. Empowering Ideas."
-                className="hero-logo w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[420px] xl:max-w-[425px] h-auto object-contain select-none transition-transform duration-300 hover:scale-[1.02] drop-shadow-[0_15px_30px_rgba(7,27,53,0.05)] relative z-10"
+                className="hero-logo h-auto object-contain select-none transition-transform duration-300 hover:scale-[1.02] drop-shadow-[0_15px_30px_rgba(7,27,53,0.05)] relative z-10"
               />
             </div>
           </div>
