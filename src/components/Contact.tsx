@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, AlertCircle, CheckCircle2, Mail } from 'lucide-react';
+import { ArrowRight, AlertCircle, CheckCircle2, Mail, Phone } from 'lucide-react';
 
 interface ContactFormData {
   name: string;
@@ -95,7 +95,7 @@ export const Contact: React.FC = () => {
         setServerError(data.error || 'Unable to process inquiry. Please email us directly.');
       }
     } catch {
-      setServerError('Connection error. You can email us directly at contact@averentechnologies.com');
+      setServerError('Connection error. You can email us directly at averen.tech@gmail.com');
     } finally {
       setLoading(false);
     }
@@ -129,14 +129,31 @@ export const Contact: React.FC = () => {
                 Have an idea or a <span className="font-semibold text-white">project</span> in mind? Tell us about it, and we&apos;ll get back to you soon.
               </p>
 
-              <div className="pt-3 flex items-center gap-2.5 text-sm text-slate-300 font-mono">
-                <Mail className="w-4 h-4 text-brand-teal" />
-                <a
-                  href="mailto:contact@averentechnologies.com"
-                  className="text-brand-teal hover:underline font-semibold"
-                >
-                  contact@averentechnologies.com
-                </a>
+              {/* Direct Contact Links */}
+              <div className="pt-2 space-y-3 text-sm sm:text-base text-slate-300">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-teal-500/10 border border-brand-teal/40 flex items-center justify-center shrink-0">
+                    <Mail className="w-4 h-4 text-brand-teal" />
+                  </div>
+                  <a
+                    href="mailto:averen.tech@gmail.com"
+                    className="text-white hover:text-brand-teal transition-colors font-medium hover:underline"
+                  >
+                    averen.tech@gmail.com
+                  </a>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-teal-500/10 border border-brand-teal/40 flex items-center justify-center shrink-0">
+                    <Phone className="w-4 h-4 text-brand-teal" />
+                  </div>
+                  <a
+                    href="tel:+919003639824"
+                    className="text-white hover:text-brand-teal transition-colors font-medium hover:underline"
+                  >
+                    +91 9003639824
+                  </a>
+                </div>
               </div>
             </div>
 

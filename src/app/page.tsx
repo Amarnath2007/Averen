@@ -7,6 +7,7 @@ import Pricing from '@/components/Pricing';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 export default function Home() {
   return (
@@ -34,6 +35,9 @@ export default function Home() {
 
       {/* Footer */}
       <Footer />
+
+      {/* Floating WhatsApp Action Button */}
+      <WhatsAppButton />
     </main>
   );
 }

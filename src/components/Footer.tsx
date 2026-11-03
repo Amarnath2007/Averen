@@ -3,11 +3,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { AverenLogo } from './AverenLogo';
-import { ArrowUp, Mail, MapPin } from 'lucide-react';
+import { ArrowUp, Mail, Phone, MapPin } from 'lucide-react';
 
 const footerNav = [
   { name: 'Home', href: '#home' },
   { name: 'Services', href: '#services' },
+  { name: 'Our Work', href: '#work' },
   { name: 'Pricing', href: '#pricing' },
   { name: 'About', href: '#about' },
   { name: 'Contact', href: '#contact' },
@@ -55,14 +56,23 @@ export const Footer: React.FC = () => {
               <div className="text-xs font-mono font-semibold tracking-wider text-brand-teal uppercase mb-2.5">
                 Contact
               </div>
-              <div className="space-y-2 text-xs sm:text-sm text-slate-400">
+              <div className="space-y-2.5 text-xs sm:text-sm text-slate-400">
                 <div className="flex items-center gap-2">
                   <Mail className="w-3.5 h-3.5 text-brand-teal flex-shrink-0" />
                   <a
-                    href="mailto:contact@averentechnologies.com"
-                    className="hover:text-white transition-colors font-mono text-xs truncate"
+                    href="mailto:averen.tech@gmail.com"
+                    className="hover:text-white hover:underline transition-colors text-xs truncate"
                   >
-                    contact@averentechnologies.com
+                    averen.tech@gmail.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone className="w-3.5 h-3.5 text-brand-teal flex-shrink-0" />
+                  <a
+                    href="tel:+919003639824"
+                    className="hover:text-white hover:underline transition-colors text-xs"
+                  >
+                    +91 9003639824
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
