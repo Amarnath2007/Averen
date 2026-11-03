@@ -329,12 +329,20 @@ This email was sent via the Averen Technologies Contact Form.
 
     if (resendError) {
       console.error('[CONTACT API] Resend email dispatch failed:', resendError);
+
+      let errorMessage =
+        resendError.message ||
+        'Failed to dispatch email enquiry via Resend. Please check sender domain and API key permissions.';
+
+      if (errorMessage.includes('You can only send testing emails to your own email address')) {
+        errorMessage =
+          'To send directly to averen.tech@gmail.com, please either sign in to Resend with averen.tech@gmail.com to create the API key, or verify your custom domain at resend.com/domains.';
+      }
+
       return NextResponse.json(
         {
           success: false,
-          error:
-            resendError.message ||
-            'Failed to dispatch email enquiry via Resend. Please check sender domain and API key permissions.',
+          error: errorMessage,
         },
         { status: 500 }
       );
