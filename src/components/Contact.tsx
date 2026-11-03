@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, AlertCircle, CheckCircle2, Mail, Phone } from 'lucide-react';
+import { ArrowRight, AlertCircle, CheckCircle2, Mail, Phone, Loader2 } from 'lucide-react';
 
 interface ContactFormData {
   name: string;
@@ -28,6 +28,7 @@ export const Contact: React.FC = () => {
     message: '',
   });
 
+  const [honeypot, setHoneypot] = useState('');
   const [errors, setErrors] = useState<Partial<ContactFormData>>({});
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -52,6 +53,8 @@ export const Contact: React.FC = () => {
 
     if (!form.name.trim()) {
       errs.name = 'Please enter your name';
+    } else if (form.name.trim().length < 2) {
+      errs.name = 'Name must be at least 2 characters';
     }
 
     if (!form.email.trim()) {
@@ -74,6 +77,7 @@ export const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (loading) return; // Prevent duplicate submissions
     setServerError(null);
 
     if (!validate()) return;
@@ -84,15 +88,18 @@ export const Contact: React.FC = () => {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, honeypot }),
       });
 
-      const data = await res.json();
+      const data = await res.json().catch(() => null);
 
-      if (res.ok && data.success) {
+      if (res.ok && data?.success) {
         setSubmitted(true);
       } else {
-        setServerError(data.error || 'Unable to process inquiry. Please email us directly.');
+        setServerError(
+          data?.error ||
+            'Unable to process inquiry at this moment. Please email us directly at averen.tech@gmail.com'
+        );
       }
     } catch {
       setServerError('Connection error. You can email us directly at averen.tech@gmail.com');
@@ -200,6 +207,8 @@ export const Contact: React.FC = () => {
                     onClick={() => {
                       setSubmitted(false);
                       setForm({ name: '', email: '', service: '', message: '' });
+                      setHoneypot('');
+                      setServerError(null);
                     }}
                     className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-slate-800 hover:bg-slate-700 text-sm text-slate-200 transition-colors mt-3"
                   >
@@ -208,6 +217,20 @@ export const Contact: React.FC = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} noValidate className="space-y-4 sm:space-y-5">
+                  {/* Honeypot field for spam bot protection */}
+                  <div className="hidden" aria-hidden="true">
+                    <label htmlFor="company_hp">Leave this field blank</label>
+                    <input
+                      id="company_hp"
+                      type="text"
+                      name="company_hp"
+                      value={honeypot}
+                      onChange={(e) => setHoneypot(e.target.value)}
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                  </div>
+
                   {serverError && (
                     <div className="p-3.5 rounded-xl bg-red-950/60 border border-red-500/40 text-sm text-red-200 flex items-center gap-2.5">
                       <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
@@ -319,10 +342,14 @@ export const Contact: React.FC = () => {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full h-[54px] sm:h-[58px] rounded-xl bg-brand-teal hover:bg-brand-aqua text-brand-navy font-bold text-base sm:text-lg flex items-center justify-center gap-2.5 transition-all shadow-md shadow-brand-teal/20 cursor-pointer disabled:opacity-70 active:scale-[0.99] mt-3"
+                    aria-busy={loading}
+                    className="w-full h-[54px] sm:h-[58px] rounded-xl bg-brand-teal hover:bg-brand-aqua text-brand-navy font-bold text-base sm:text-lg flex items-center justify-center gap-2.5 transition-all shadow-md shadow-brand-teal/20 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed active:scale-[0.99] mt-3"
                   >
                     {loading ? (
-                      <span>Sending Inquiry...</span>
+                      <>
+                        <Loader2 className="w-5 h-5 animate-spin text-brand-navy" />
+                        <span>Sending Inquiry...</span>
+                      </>
                     ) : (
                       <>
                         <span>Send Inquiry</span>
