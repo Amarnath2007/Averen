@@ -19,7 +19,14 @@ export const metadata: Metadata = {
   description:
     'Averen Technologies is a digital product and technology studio providing web development, application development, MVP prototyping, custom software solutions, and UI/UX creative design.',
   icons: {
-    icon: '/averen.png',
+    icon: [
+      { url: '/Averen%20Technologies.png', type: 'image/png' },
+      { url: '/favicon.ico' },
+    ],
+    shortcut: '/Averen%20Technologies.png',
+    apple: [
+      { url: '/Averen%20Technologies.png', type: 'image/png' },
+    ],
   },
 };
 
