@@ -128,19 +128,19 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Complete Averen Logo with Gentle Glow & Visible Circular Frame */}
+          {/* Right Column: Complete Averen Logo with Gentle Glow & Perfectly Centered Circular Frame */}
           <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end z-10">
             <div className="relative w-full max-w-[680px] flex items-center justify-center py-6 px-1">
-              {/* 1. Gentle Cyan-Blue Radial Gradient Glow behind Logo */}
-              <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] sm:w-[480px] sm:h-[480px] lg:w-[560px] lg:h-[560px] rounded-full bg-[radial-gradient(circle,rgba(0,191,192,0.22)_0%,rgba(39,222,197,0.13)_35%,rgba(8,121,185,0.04)_55%,transparent_72%)] blur-2xl pointer-events-none z-0" />
+              {/* 1. Gentle Cyan-Blue Radial Gradient Glow behind Logo - Centered */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] sm:w-[480px] sm:h-[480px] lg:w-[560px] lg:h-[560px] rounded-full bg-[radial-gradient(circle,rgba(0,191,192,0.22)_0%,rgba(39,222,197,0.13)_35%,rgba(8,121,185,0.04)_55%,transparent_72%)] blur-2xl pointer-events-none z-0" />
 
-              {/* 2. Visible Luminous Circular Frame with soft translucent fill */}
-              <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[275px] h-[275px] sm:w-[440px] sm:h-[440px] lg:w-[540px] lg:h-[540px] rounded-full bg-white/45 backdrop-blur-[1px] border-[1.5px] border-white/90 shadow-[0_0_24px_rgba(0,191,192,0.18)] pointer-events-none z-0">
+              {/* 2. Visible Luminous Circular Frame with soft translucent fill - Perfectly Centered */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[275px] h-[275px] sm:w-[440px] sm:h-[440px] lg:w-[540px] lg:h-[540px] rounded-full bg-white/45 backdrop-blur-[1px] border-[1.5px] border-white/90 shadow-[0_0_24px_rgba(0,191,192,0.18)] pointer-events-none z-0">
                 {/* Visible Accent Node Dot at ~2 o'clock */}
                 <div className="absolute top-[14%] right-[14%] w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-brand-teal shadow-[0_0_10px_#00BFC0] ring-2 ring-white" />
               </div>
 
-              {/* 3. Complete, Uncropped Original Averen Technologies Logo */}
+              {/* 3. Complete, Uncropped Original Averen Technologies Logo - Centered above circle */}
               <img
                 src="/averen.png"
                 alt="AVEREN TECHNOLOGIES - Building Digital Products. Empowering Ideas."
