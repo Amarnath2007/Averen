@@ -233,10 +233,10 @@ export const Pricing: React.FC = () => {
               {/* Offerings List with Price Ranges */}
               <div className="space-y-4 mb-8">
                 {[
-                  { name: 'Portfolio Building', price: '₹999 – ₹4,999' },
-                  { name: 'Startup Idea MVP', price: '₹1,999 – ₹3,999' },
-                  { name: 'Hackathon Prototypes', price: '₹499 – ₹2,999' },
-                  { name: 'College Project Support', price: '₹3,999 – ₹7,999' },
+                  { name: 'Portfolio Building', price: 'From ₹999' },
+                  { name: 'Startup Idea MVP', price: 'From ₹799' },
+                  { name: 'Hackathon Prototypes', price: 'From ₹499' },
+                  { name: 'College Project Support', price: 'From ₹1,999' },
                 ].map((item) => (
                   <div
                     key={item.name}

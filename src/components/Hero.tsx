@@ -3,13 +3,18 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { Ticker } from './Ticker';
 
 export const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative isolate pt-28 sm:pt-32 lg:pt-36 pb-16 sm:pb-20 lg:pb-28 overflow-hidden scroll-mt-28 bg-gradient-to-b from-[#F2FAFC] via-[#FAFEFF] to-[#FFFFFF]"
+      className="relative isolate pt-[74px] sm:pt-[82px] lg:pt-[86px] pb-16 sm:pb-20 lg:pb-28 overflow-hidden scroll-mt-20 bg-gradient-to-b from-[#F2FAFC] via-[#FAFEFF] to-[#FFFFFF]"
     >
+      {/* Running Text Ticker directly below the navbar, scrolling naturally with the hero section */}
+      <div className="relative z-20 w-full mb-8 sm:mb-10 lg:mb-12">
+        <Ticker />
+      </div>
       {/* ======================================================== */}
       {/* RESTORED VISUAL ACCENTS (75% White, 15% Aqua, 10% Teal)  */}
       {/* ======================================================== */}

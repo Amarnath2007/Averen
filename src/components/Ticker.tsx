@@ -61,3 +61,4 @@ export const Ticker: React.FC = () => {
 };
 
 export default Ticker;
+
