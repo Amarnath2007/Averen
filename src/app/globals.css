@@ -62,3 +62,36 @@ body {
   height: auto;
   object-fit: contain;
 }
+
+/* ==========================================================================
+   Running Text Ticker Animation
+   - Moves continuously from RIGHT TO LEFT (0% -> -50%)
+   - Seamless infinite loop using duplicated content
+   - Pauses on hover
+   - Supports prefers-reduced-motion
+   ========================================================================== */
+@keyframes ticker-slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-slide 32s linear infinite;
+  will-change: transform;
+}
+
+.ticker-wrapper:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation-play-state: paused;
+  }
+}
