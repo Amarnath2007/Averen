@@ -105,11 +105,11 @@ export const Footer: React.FC = () => {
             <div className="pt-2">
               <button
                 onClick={scrollToTop}
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-medium text-slate-300 transition-colors"
+                className="group btn-glass-dark inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
                 aria-label="Back to top"
               >
                 <span>Back to Top</span>
-                <ArrowUp className="w-3.5 h-3.5 text-brand-teal" />
+                <ArrowUp className="w-3.5 h-3.5 text-brand-teal transition-transform duration-200 group-hover:-translate-y-0.5" />
               </button>
             </div>
           </div>

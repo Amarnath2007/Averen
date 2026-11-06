@@ -118,7 +118,7 @@ export const Hero: React.FC = () => {
             <div className="flex flex-wrap items-center gap-4 pt-1 sm:pt-2">
               <Link
                 href="#services"
-                className="group inline-flex items-center justify-center gap-3 h-[54px] sm:h-[60px] px-8 sm:px-9 rounded-full bg-brand-navy hover:bg-brand-navy-dark text-white font-bold text-base sm:text-lg shadow-sm transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+                className="group btn-glass-primary-navy inline-flex items-center justify-center gap-3 h-[54px] sm:h-[60px] px-8 sm:px-9 rounded-full text-white font-bold text-base sm:text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2"
               >
                 <span>Our Services</span>
                 <ArrowRight className="w-5 h-5 text-brand-teal transition-transform duration-200 group-hover:translate-x-1" />
@@ -126,7 +126,7 @@ export const Hero: React.FC = () => {
 
               <Link
                 href="#contact"
-                className="inline-flex items-center justify-center h-[54px] sm:h-[60px] px-8 sm:px-9 rounded-full bg-white hover:bg-slate-50 border-2 border-slate-300 hover:border-slate-400 text-brand-navy font-bold text-base sm:text-lg shadow-xs transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                className="btn-glass-secondary inline-flex items-center justify-center h-[54px] sm:h-[60px] px-8 sm:px-9 rounded-full font-bold text-base sm:text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2"
               >
                 Get a Quote
               </Link>

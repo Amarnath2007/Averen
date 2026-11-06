@@ -120,8 +120,8 @@ export const Portfolio: React.FC = () => {
                 onClick={() => setFilter(tab.id as any)}
                 className={`px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
                   filter === tab.id
-                    ? 'bg-brand-navy-950 text-white shadow-sm'
-                    : 'bg-white text-brand-slate-600 hover:text-brand-navy-900 border border-slate-200'
+                    ? 'btn-glass-primary-navy text-white shadow-sm'
+                    : 'btn-glass-secondary text-brand-slate-600 hover:text-brand-navy-900'
                 }`}
               >
                 {tab.label}

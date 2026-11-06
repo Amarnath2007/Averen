@@ -95,7 +95,7 @@ export const Pricing: React.FC = () => {
               <Link
                 href="#contact"
                 onClick={() => handleServiceSelect('Creative & Digital Design')}
-                className="group inline-flex items-center justify-center gap-2.5 w-full h-[52px] sm:h-[56px] rounded-full bg-white hover:bg-slate-50 border-2 border-slate-300 text-brand-navy font-bold text-base transition-all hover:border-brand-teal"
+                className="group btn-glass-secondary inline-flex items-center justify-center gap-2.5 w-full h-[52px] sm:h-[56px] rounded-full font-bold text-base focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
               >
                 <span>Get a Design</span>
                 <ArrowRight className="w-4 h-4 text-brand-teal transition-transform duration-200 group-hover:translate-x-1" />
@@ -196,7 +196,7 @@ export const Pricing: React.FC = () => {
               <Link
                 href="#contact"
                 onClick={() => handleServiceSelect('Web Development')}
-                className="group inline-flex items-center justify-center gap-2.5 w-full h-[52px] sm:h-[56px] rounded-full bg-brand-teal hover:bg-brand-aqua text-brand-navy font-bold text-base transition-all shadow-md shadow-brand-teal/20"
+                className="group btn-glass-primary-teal inline-flex items-center justify-center gap-2.5 w-full h-[52px] sm:h-[56px] rounded-full font-bold text-base focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2 focus-visible:ring-offset-[#071B35]"
               >
                 <span>Build a Website</span>
                 <ArrowRight className="w-4 h-4 text-brand-navy transition-transform duration-200 group-hover:translate-x-1" />
@@ -258,7 +258,7 @@ export const Pricing: React.FC = () => {
               <Link
                 href="#contact"
                 onClick={() => handleServiceSelect('Student & Innovation Offers')}
-                className="group inline-flex items-center justify-center gap-2.5 w-full h-[52px] sm:h-[56px] rounded-full bg-white hover:bg-slate-50 border-2 border-slate-300 text-brand-navy font-bold text-base transition-all hover:border-brand-teal"
+                className="group btn-glass-secondary inline-flex items-center justify-center gap-2.5 w-full h-[52px] sm:h-[56px] rounded-full font-bold text-base focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
               >
                 <span>Claim Student Offer</span>
                 <ArrowRight className="w-4 h-4 text-brand-teal transition-transform duration-200 group-hover:translate-x-1" />
@@ -285,10 +285,10 @@ export const Pricing: React.FC = () => {
 
           <Link
             href="#contact"
-            className="inline-flex items-center justify-center gap-2.5 h-[52px] sm:h-[56px] px-8 rounded-full bg-brand-navy hover:bg-brand-navy-dark text-white font-bold text-base shadow-sm transition-all hover:scale-[1.02] active:scale-[0.98] flex-shrink-0"
+            className="group btn-glass-primary-navy inline-flex items-center justify-center gap-2.5 h-[52px] sm:h-[56px] px-8 rounded-full text-white font-bold text-base flex-shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2"
           >
             <span>Discuss Your Project</span>
-            <ArrowRight className="w-4 h-4 text-brand-teal" />
+            <ArrowRight className="w-4 h-4 text-brand-teal transition-transform duration-200 group-hover:translate-x-1" />
           </Link>
         </div>
       </div>

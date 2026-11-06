@@ -85,10 +85,10 @@ export const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center">
             <Link
               href="#contact"
-              className="group inline-flex items-center gap-2 px-6 py-2.5 sm:py-3 rounded-full bg-brand-navy hover:bg-brand-navy-dark text-white text-sm sm:text-[15px] font-semibold shadow-sm transition-all duration-200 hover:shadow-md hover:scale-[1.02] active:scale-[0.98]"
+              className="group btn-glass-primary-navy inline-flex items-center gap-2 px-6 py-2.5 sm:py-3 rounded-full text-white text-sm sm:text-[15px] font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2"
             >
               <span>Get a Quote</span>
-              <ArrowRight className="w-4 h-4 text-brand-teal transition-transform duration-200 group-hover:translate-x-0.5" />
+              <ArrowRight className="w-4 h-4 text-brand-teal transition-transform duration-200 group-hover:translate-x-1" />
             </Link>
           </div>
 
@@ -96,7 +96,7 @@ export const Navbar: React.FC = () => {
           <div className="flex md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl text-brand-navy hover:bg-slate-100 transition-colors focus:outline-none"
+              className="p-2.5 rounded-xl btn-glass-secondary text-brand-navy hover:text-brand-teal focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
               aria-label="Toggle navigation"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -130,10 +130,10 @@ export const Navbar: React.FC = () => {
               <Link
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-brand-navy text-white text-sm font-medium shadow-sm"
+                className="group btn-glass-primary-navy flex items-center justify-center gap-2 w-full py-3 rounded-full text-white text-sm font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
               >
                 <span>Get a Quote</span>
-                <ArrowRight className="w-4 h-4 text-brand-teal" />
+                <ArrowRight className="w-4 h-4 text-brand-teal transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
             </div>
           </nav>

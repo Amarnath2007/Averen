@@ -210,9 +210,9 @@ export const Contact: React.FC = () => {
                       setHoneypot('');
                       setServerError(null);
                     }}
-                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-slate-800 hover:bg-slate-700 text-sm text-slate-200 transition-colors mt-3"
+                    className="group btn-glass-dark inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal mt-3"
                   >
-                    Send another inquiry
+                    <span>Send another inquiry</span>
                   </button>
                 </div>
               ) : (
@@ -343,7 +343,7 @@ export const Contact: React.FC = () => {
                     type="submit"
                     disabled={loading}
                     aria-busy={loading}
-                    className="w-full h-[54px] sm:h-[58px] rounded-xl bg-brand-teal hover:bg-brand-aqua text-brand-navy font-bold text-base sm:text-lg flex items-center justify-center gap-2.5 transition-all shadow-md shadow-brand-teal/20 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed active:scale-[0.99] mt-3"
+                    className="group btn-glass-primary-teal w-full h-[54px] sm:h-[58px] rounded-xl font-bold text-base sm:text-lg flex items-center justify-center gap-2.5 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2 focus-visible:ring-offset-[#061B34] mt-3"
                   >
                     {loading ? (
                       <>
@@ -353,7 +353,7 @@ export const Contact: React.FC = () => {
                     ) : (
                       <>
                         <span>Send Inquiry</span>
-                        <ArrowRight className="w-5 h-5 text-brand-navy" />
+                        <ArrowRight className="w-5 h-5 text-brand-navy transition-transform duration-200 group-hover:translate-x-1" />
                       </>
                     )}
                   </button>

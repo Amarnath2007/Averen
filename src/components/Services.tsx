@@ -101,10 +101,10 @@ export const Services: React.FC = () => {
                 <Link
                   href="#contact"
                   onClick={() => handleServiceSelect(item.title)}
-                  className="w-10 h-10 rounded-full bg-slate-100 group-hover:bg-brand-teal group-hover:text-white flex items-center justify-center text-slate-600 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-teal/40"
+                  className="w-10 h-10 rounded-full btn-glass-icon flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
                   aria-label={`Enquire about ${item.title}`}
                 >
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-0.5" />
+                  <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </Link>
               </div>
             </div>

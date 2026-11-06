@@ -104,7 +104,7 @@ export const OurWork: React.FC = () => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group/btn inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-slate-300 hover:border-brand-teal text-brand-navy hover:text-brand-teal font-semibold text-sm transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                  className="group/btn btn-glass-secondary inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-sm hover:text-brand-teal focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
                 >
                   <span>Visit Website</span>
                   <ArrowRight className="w-4 h-4 text-brand-teal transition-transform duration-200 group-hover/btn:translate-x-1" />
