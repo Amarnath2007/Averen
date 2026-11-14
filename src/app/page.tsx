@@ -7,10 +7,14 @@ import Pricing from '@/components/Pricing';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import PromoModal from '@/components/PromoModal';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-brand-bg text-brand-text">
+      {/* Promotional Campaign Modal */}
+      <PromoModal />
+
       {/* Navigation */}
       <Navbar />
 
