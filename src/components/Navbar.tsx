@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { AverenLogo } from './AverenLogo';
 import { Menu, X, ArrowRight } from 'lucide-react';
 
@@ -11,15 +12,22 @@ const navLinks = [
   { name: 'Our Work', href: '#work' },
   { name: 'Pricing', href: '#pricing' },
   { name: 'About', href: '#about' },
+  { name: 'Insights', href: '/insights' },
   { name: 'Contact', href: '#contact' },
 ];
 
 export const Navbar: React.FC = () => {
+  const pathname = usePathname();
+  const isHome = pathname === '/';
+  const isInsights = pathname?.startsWith('/insights');
+
   const [activeSection, setActiveSection] = useState('home');
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    if (!isHome) return;
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 15);
 
@@ -37,21 +45,39 @@ export const Navbar: React.FC = () => {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isHome]);
+
+  // For non-home pages, also track scroll state for header background
+  useEffect(() => {
+    if (isHome) return;
+
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 15);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isHome]);
+
+  const resolveHref = (href: string) => {
+    if (href.startsWith('/')) return href;
+    if (isHome) return href;
+    return `/${href}`;
+  };
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+        scrolled || !isHome
           ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200/80 py-3.5'
           : 'bg-transparent py-4 sm:py-5'
       }`}
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Logo: Clear horizontal logo (symbol + AVEREN TECHNOLOGIES), ~200-220px wide */}
+          {/* Brand Logo: Clear horizontal logo */}
           <Link
-            href="#home"
+            href={isHome ? '#home' : '/#home'}
             className="group focus:outline-none flex items-center"
             aria-label="Averen Technologies Home"
           >
@@ -59,21 +85,25 @@ export const Navbar: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8 lg:gap-10">
+          <nav className="hidden md:flex items-center gap-7 lg:gap-9">
             {navLinks.map((link) => {
-              const isActive = activeSection === link.href.substring(1);
+              const isLinkActive =
+                link.href === '/insights'
+                  ? isInsights
+                  : isHome && activeSection === link.href.substring(1);
+
               return (
                 <Link
                   key={link.name}
-                  href={link.href}
+                  href={resolveHref(link.href)}
                   className={`relative text-[15px] lg:text-base font-medium transition-colors py-1 ${
-                    isActive
+                    isLinkActive
                       ? 'text-brand-navy font-bold'
                       : 'text-slate-600 hover:text-brand-navy'
                   }`}
                 >
                   {link.name}
-                  {isActive && (
+                  {isLinkActive && (
                     <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-brand-teal rounded-full" />
                   )}
                 </Link>
@@ -84,7 +114,7 @@ export const Navbar: React.FC = () => {
           {/* Right CTA Button */}
           <div className="hidden md:flex items-center">
             <Link
-              href="#contact"
+              href={isHome ? '#contact' : '/#contact'}
               className="group btn-glass-primary-navy inline-flex items-center gap-2 px-6 py-2.5 sm:py-3 rounded-full text-white text-sm sm:text-[15px] font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2"
             >
               <span>Get a Quote</span>
@@ -110,14 +140,18 @@ export const Navbar: React.FC = () => {
         <div className="md:hidden bg-white border-b border-slate-200 shadow-xl px-5 py-6">
           <nav className="flex flex-col gap-2">
             {navLinks.map((link) => {
-              const isActive = activeSection === link.href.substring(1);
+              const isLinkActive =
+                link.href === '/insights'
+                  ? isInsights
+                  : isHome && activeSection === link.href.substring(1);
+
               return (
                 <Link
                   key={link.name}
-                  href={link.href}
+                  href={resolveHref(link.href)}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${
-                    isActive
+                    isLinkActive
                       ? 'bg-teal-50 text-brand-teal-dark font-semibold'
                       : 'text-slate-700 hover:bg-slate-50'
                   }`}
@@ -128,7 +162,7 @@ export const Navbar: React.FC = () => {
             })}
             <div className="pt-4 mt-2 border-t border-slate-100">
               <Link
-                href="#contact"
+                href={isHome ? '#contact' : '/#contact'}
                 onClick={() => setMobileMenuOpen(false)}
                 className="group btn-glass-primary-navy flex items-center justify-center gap-2 w-full py-3 rounded-full text-white text-sm font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
               >

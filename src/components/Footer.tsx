@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { AverenLogo } from './AverenLogo';
 import { ArrowUp, Mail, Phone, MapPin } from 'lucide-react';
 
@@ -11,12 +12,22 @@ const footerNav = [
   { name: 'Our Work', href: '#work' },
   { name: 'Pricing', href: '#pricing' },
   { name: 'About', href: '#about' },
+  { name: 'Insights', href: '/insights' },
   { name: 'Contact', href: '#contact' },
 ];
 
 export const Footer: React.FC = () => {
+  const pathname = usePathname();
+  const isHome = pathname === '/';
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const resolveHref = (href: string) => {
+    if (href.startsWith('/')) return href;
+    if (isHome) return href;
+    return `/${href}`;
   };
 
   return (
@@ -26,7 +37,11 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 pb-10 border-b border-slate-800/80">
           {/* Column 1: Complete Logo & Company Description */}
           <div className="md:col-span-6 space-y-4">
-            <Link href="#home" className="inline-block focus:outline-none" aria-label="Averen Technologies Home">
+            <Link
+              href={isHome ? '#home' : '/#home'}
+              className="inline-block focus:outline-none"
+              aria-label="Averen Technologies Home"
+            >
               <AverenLogo light={true} />
             </Link>
             <p className="text-sm text-slate-400 max-w-md leading-relaxed">
@@ -42,7 +57,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-1.5 text-xs sm:text-sm text-slate-400">
               {footerNav.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="hover:text-white transition-colors">
+                  <Link href={resolveHref(item.href)} className="hover:text-white transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -128,10 +143,10 @@ export const Footer: React.FC = () => {
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
           <p>© {new Date().getFullYear()} AVEREN TECHNOLOGIES. All rights reserved.</p>
           <div className="flex items-center gap-5">
-            <Link href="#home" className="hover:text-slate-400 transition-colors">
+            <Link href={isHome ? '#home' : '/#home'} className="hover:text-slate-400 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#home" className="hover:text-slate-400 transition-colors">
+            <Link href={isHome ? '#home' : '/#home'} className="hover:text-slate-400 transition-colors">
               Terms of Service
             </Link>
           </div>
