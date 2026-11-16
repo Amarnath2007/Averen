@@ -68,12 +68,21 @@ export const Footer: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="w-3.5 h-3.5 text-brand-teal flex-shrink-0" />
-                  <a
-                    href="tel:+919003639824"
-                    className="hover:text-white hover:underline transition-colors text-xs"
-                  >
-                    +91 9003639824
-                  </a>
+                  <div className="flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-xs">
+                    <a
+                      href="tel:+919003639824"
+                      className="hover:text-white hover:underline transition-colors"
+                    >
+                      +91 9003639824
+                    </a>
+                    <span className="text-slate-500">•</span>
+                    <a
+                      href="tel:+916369310062"
+                      className="hover:text-white hover:underline transition-colors"
+                    >
+                      +91 6369310062
+                    </a>
+                  </div>
                 </div>
                 <div className="flex items-center gap-2">
                   <svg

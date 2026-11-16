@@ -156,12 +156,21 @@ export const Contact: React.FC = () => {
                   <div className="w-9 h-9 rounded-xl bg-teal-500/10 border border-brand-teal/40 flex items-center justify-center shrink-0">
                     <Phone className="w-4 h-4 text-brand-teal" />
                   </div>
-                  <a
-                    href="tel:+919003639824"
-                    className="text-white hover:text-brand-teal transition-colors font-medium hover:underline"
-                  >
-                    +91 9003639824
-                  </a>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-x-2.5 gap-y-0.5">
+                    <a
+                      href="tel:+919003639824"
+                      className="text-white hover:text-brand-teal transition-colors font-medium hover:underline"
+                    >
+                      +91 9003639824
+                    </a>
+                    <span className="text-slate-500 text-xs hidden sm:inline">•</span>
+                    <a
+                      href="tel:+916369310062"
+                      className="text-white hover:text-brand-teal transition-colors font-medium hover:underline"
+                    >
+                      +91 6369310062
+                    </a>
+                  </div>
                 </div>
 
                 {/* WhatsApp */}
