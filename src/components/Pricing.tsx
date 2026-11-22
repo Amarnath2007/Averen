@@ -67,7 +67,7 @@ export const Pricing: React.FC = () => {
                   Starting at
                 </span>
                 <span className="font-heading text-3xl sm:text-4xl font-extrabold text-brand-teal">
-                  ₹299
+                  ₹499
                 </span>
               </div>
 
@@ -137,7 +137,7 @@ export const Pricing: React.FC = () => {
                   </div>
                   <div className="text-right flex-shrink-0">
                     <div className="text-[10px] uppercase font-mono tracking-wider text-slate-400">From</div>
-                    <div className="font-heading text-lg sm:text-xl font-bold text-brand-aqua">₹999</div>
+                    <div className="font-heading text-lg sm:text-xl font-bold text-brand-aqua">₹1,999</div>
                   </div>
                 </div>
 
@@ -153,7 +153,7 @@ export const Pricing: React.FC = () => {
                   </div>
                   <div className="text-right flex-shrink-0">
                     <div className="text-[10px] uppercase font-mono tracking-wider text-slate-400">From</div>
-                    <div className="font-heading text-lg sm:text-xl font-bold text-brand-aqua">₹2,999</div>
+                    <div className="font-heading text-lg sm:text-xl font-bold text-brand-aqua">₹4,999</div>
                   </div>
                 </div>
 
@@ -169,7 +169,7 @@ export const Pricing: React.FC = () => {
                   </div>
                   <div className="text-right flex-shrink-0">
                     <div className="text-[10px] uppercase font-mono tracking-wider text-slate-400">From</div>
-                    <div className="font-heading text-lg sm:text-xl font-bold text-brand-aqua">₹7,999</div>
+                    <div className="font-heading text-lg sm:text-xl font-bold text-brand-aqua">₹8,999</div>
                   </div>
                 </div>
 
@@ -185,7 +185,7 @@ export const Pricing: React.FC = () => {
                   </div>
                   <div className="text-right flex-shrink-0">
                     <div className="text-[10px] uppercase font-mono tracking-wider text-slate-400">From</div>
-                    <div className="font-heading text-lg sm:text-xl font-bold text-brand-aqua">₹8,999</div>
+                    <div className="font-heading text-lg sm:text-xl font-bold text-brand-aqua">₹11,999</div>
                   </div>
                 </div>
               </div>
@@ -234,9 +234,9 @@ export const Pricing: React.FC = () => {
               <div className="space-y-4 mb-8">
                 {[
                   { name: 'Portfolio Building', price: 'From ₹999' },
-                  { name: 'Startup Idea MVP', price: 'From ₹799' },
-                  { name: 'Hackathon Prototypes', price: 'From ₹499' },
-                  { name: 'College Project Support', price: 'From ₹1,999' },
+                  { name: 'Startup Idea MVP', price: 'From ₹1,999' },
+                  { name: 'Hackathon Prototypes', price: 'From ₹999' },
+                  { name: 'College Project Support', price: 'From ₹2,999' },
                 ].map((item) => (
                   <div
                     key={item.name}
@@ -245,7 +245,7 @@ export const Pricing: React.FC = () => {
                     <span className="text-sm sm:text-base font-semibold text-slate-700">
                       {item.name}
                     </span>
-                    <span className="font-heading text-sm sm:text-base font-bold text-brand-teal-dark">
+                    <span className="font-heading text-sm sm:text-base font-bold text-brand-teal-dark whitespace-nowrap flex-shrink-0">
                       {item.price}
                     </span>
                   </div>
