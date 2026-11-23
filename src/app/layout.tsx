@@ -15,7 +15,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://averen.tech'),
+  metadataBase: new URL('https://www.averentechnologies.in'),
   title: 'AVEREN TECHNOLOGIES | Building Digital Products. Empowering Ideas.',
   description:
     'Averen Technologies is a digital product and technology studio providing web development, application development, MVP prototyping, custom software solutions, and UI/UX creative design.',

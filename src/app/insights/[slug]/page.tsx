@@ -34,6 +34,9 @@ export async function generateMetadata({
   return {
     title: `${article.title} | Averen Insights`,
     description: article.shortDescription,
+    alternates: {
+      canonical: `https://www.averentechnologies.in/insights/${article.slug}`,
+    },
     keywords: [
       'Averen Technologies',
       'Our Story',
@@ -46,6 +49,7 @@ export async function generateMetadata({
       title: `${article.title} | Averen Insights`,
       description: article.shortDescription,
       type: 'article',
+      url: `https://www.averentechnologies.in/insights/${article.slug}`,
       publishedTime: article.publishedDate,
     },
   };

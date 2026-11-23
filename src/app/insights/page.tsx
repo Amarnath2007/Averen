@@ -9,11 +9,15 @@ export const metadata: Metadata = {
   title: 'Averen Insights | Ideas That Move Businesses Forward',
   description:
     'Explore practical insights, technology trends, development guides and ideas to help businesses and creators grow in the digital world. Curated by Averen Technologies.',
+  alternates: {
+    canonical: 'https://www.averentechnologies.in/insights',
+  },
   openGraph: {
     title: 'Averen Insights | Ideas That Move Businesses Forward',
     description:
       'Explore practical insights, technology trends, development guides and ideas to help businesses and creators grow in the digital world. Curated by Averen Technologies.',
     type: 'website',
+    url: 'https://www.averentechnologies.in/insights',
   },
 };
 
